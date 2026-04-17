@@ -1,0 +1,30 @@
+{
+  "name": "ShoppingItem",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Ingredient name"
+    },
+    "amount": {
+      "type": "string",
+      "description": "Amount/quantity"
+    },
+    "is_checked": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether item is in cart"
+    },
+    "recipe_id": {
+      "type": "string",
+      "description": "Source recipe ID (optional)"
+    },
+    "recipe_title": {
+      "type": "string",
+      "description": "Source recipe title (optional)"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
