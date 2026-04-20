@@ -3,7 +3,7 @@ export const proteinSources = [
   { id: 'meat', label: 'Мясо' },
   { id: 'poultry', label: 'Птица' },
   { id: 'fish', label: 'Рыба' },
-  { id: 'dairy', label: 'Молочка' },
+  { id: 'dairy', label: 'Молочные' },
   { id: 'plant', label: 'Растит.' },
 ]
 
