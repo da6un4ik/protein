@@ -1,0 +1,150 @@
+:root {
+  --bg: #fafaf9;
+  --text: #262626;
+  --accent: #a3a380;
+  --glass: rgb(255 255 255 / 0.6);
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.screen-wrap {
+  width: 100%;
+  max-width: 390px;
+  min-height: 844px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.08);
+  border-radius: var(--radius);
+  border: 1px solid rgb(255 255 255 / 0.5);
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin-bottom: 16px;
+}
+
+.title {
+  margin: 12px 0;
+  letter-spacing: 0.2px;
+}
+
+.chips-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.chip {
+  border: 0;
+  padding: 8px 12px;
+  white-space: nowrap;
+  color: var(--text);
+}
+
+.chip.active { outline: 2px solid var(--accent); }
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.feed-card { overflow: hidden; }
+.feed-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.feed-content { padding: 12px; }
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.btn,
+.icon-btn,
+.mini {
+  border: 0;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 12px;
+}
+
+.icon-btn { min-width: 44px; }
+.mini { padding: 6px 10px; font-size: 12px; }
+.mini.danger { background: #7a2f2f; }
+
+.detail {
+  overflow: hidden;
+}
+
+.detail-hero img {
+  width: 100%;
+  height: 50%;
+  max-height: 280px;
+  object-fit: cover;
+}
+
+.detail-body { padding: 12px; }
+.macro-row { color: #555; }
+
+.ingredients,
+.steps,
+.shopping-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 18px;
+}
+
+.ingredients li,
+.shopping-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.panel {
+  padding: 14px;
+  margin-top: 10px;
+}
+
+.checked {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  .screen-wrap {
+    max-width: 900px;
+    min-height: auto;
+  }
+  .feed {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
